@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.link.models.Pasta;
+import com.example.link.models.Pastaa;
 import com.example.link.repository.PastaRepository;
 @CrossOrigin
 @RestController
@@ -31,7 +31,7 @@ PastaRepository pastaRepository;
 //* RETORNAR TODAS AS PASTAS
 
 @GetMapping("/listar")
-public List<Pasta> listarPastas(){
+public List<Pastaa> listarPastas(){
 	
 	return pastaRepository.findAll();
 	
@@ -41,7 +41,7 @@ public List<Pasta> listarPastas(){
 //CRIAR PASTA
 
 @PostMapping("/salvar")
-public Pasta salvarPasta(@RequestBody Pasta pasta) {
+public Pastaa salvarPasta(@RequestBody Pastaa pasta) {
 	
 	return pastaRepository.save(pasta);
 	
@@ -50,7 +50,7 @@ public Pasta salvarPasta(@RequestBody Pasta pasta) {
 
 //DELETAR PASTA 
 @DeleteMapping("/deletar")
-public void deletarPasta(@RequestBody Pasta pasta) {
+public void deletarPasta(@RequestBody Pastaa pasta) {
 	pastaRepository.delete(pasta);
 	
 }

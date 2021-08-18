@@ -39,7 +39,7 @@ private String url;
 
 @ManyToOne(fetch = FetchType.EAGER)
 @JoinColumn(name = "tb_pasta_idpasta")
-private Pasta  pastaLink;
+private Pastaa  pastaLink;
 
 
 public int getId() {
@@ -66,13 +66,13 @@ public void setUrl(String url) {
 
 
 
-public Pasta getPastaLink() {
+public Pastaa getPastaLink() {
 	return pastaLink;
 }
 
 
 
-public void setPastaLink(Pasta pastaLink) {
+public void setPastaLink(Pastaa pastaLink) {
 	this.pastaLink = pastaLink;
 }
 
